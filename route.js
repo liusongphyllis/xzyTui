@@ -11,7 +11,7 @@
  		password:req.body.password
  	};
 
- 	model.insertUser(data,,function(err,result){
+ 	model.insertUser(data,function(err,result){
 
  			err? res.status(403).end():res.send(result);
 
