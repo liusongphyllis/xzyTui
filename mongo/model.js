@@ -10,7 +10,7 @@ var  db = mongoose.createConnection('mongodb://127.0.0.1:27017');
 //mongoose.model(name, schema.userSchema)
 var userModel = db.model('mongoose',schema.userSchema);
 
-exports.insertUser = function(data){
+exports.insertUser = function(data,callback){
    
    var doc = data || { username : 'xzy', password:"123" };
    userModel.create(doc, function(error){
